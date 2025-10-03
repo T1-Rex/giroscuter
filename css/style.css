@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 1px solid green;
+    /* box-sizing: border-box; */
+}
+
+header {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg.jpg") no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin: auto;
+    max-width: 1134px;
+    width: 90%;
+}
+
+.number>p {
+    font-size: 16px;
+}
+
+.button-number {
+    width: 184px;
+    height: 37px;
+    background-color: #FFA019;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ul-nav {
+    list-style-type: none;
+    display: flex;
+}
+
