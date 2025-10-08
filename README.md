@@ -1,1 +1,1 @@
-# giroscuter main + footer + header
+# giroscuter main + footer + header + адаптив
