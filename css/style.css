@@ -484,6 +484,10 @@ footer{
         background-repeat: no-repeat;
     }
 
+    .text-img{
+        justify-content: center;
+    }
+
     .footer {
         flex-direction: column;
         gap: 20px;
@@ -663,8 +667,8 @@ footer{
 
     .text-img {
         width: 100%;
-        text-align: center;
         font-size: 16px;
+        justify-content: center;
     }
 
     .footer {
@@ -980,5 +984,6 @@ footer{
         font-size: 14px;
     }
 }
+
 
 
