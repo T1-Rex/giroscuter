@@ -4,6 +4,11 @@
     /* border: 1px solid green; */
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+*:focus{
+    outline: none;
 }
 
 header {
@@ -53,11 +58,17 @@ header {
 
 .text-ul {
     margin: 10px 10px;
+    transition: transform 0.2s ease;
 }
 
 .nav-item{
     text-decoration: none;
     color: black;
+}
+
+.text-ul:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
 }
 
 .number{
@@ -106,6 +117,11 @@ header {
     padding: 21px 0;
     margin: 10px auto;
     border-radius: 10px;
+    transition: background-color 0.35s ease;
+}
+
+.button-catalog:hover{
+    background-color: #c0c0c0;
 }
 
 .advantage-text{
@@ -169,11 +185,12 @@ header {
     background-color: #FFA019;
     border:white solid 1px;
     margin-right: 11px;
+    padding-left: 25px;
+    color: white;
 }
 
 input::placeholder{
     color:white;
-    padding-left: 25px;
 }
 
 .button-subscribe{
@@ -238,13 +255,13 @@ ul {
     margin-top: 15px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 16px; /*единый отступ между элементами*/
     font-size: 16px;
     font-weight: lighter;
 }
 
 .catalog-nav>p{
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
 }
 
 .catalog-nav>p:hover{
@@ -270,6 +287,11 @@ ul {
     height: 400px;
     width: 261px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease; /*плавность анимации*/
+}
+
+.card:hover{
+    transform: scale(1.05)
 }
 
 .card>svg{margin-top: 10px;}
@@ -333,6 +355,7 @@ ul {
     align-items: center;
 }
 
+/*отступы от границ страницы у первого и последнего дочернего элемента brands*/
 .brands>p:first-child{margin-left: 90px;}
 .brands>p:last-child{margin-right: 90px;}
 
@@ -342,6 +365,10 @@ ul {
     display: flex;
 }
 
+.info-title{margin-top: 60px;}
+
+
+/*общая стилистика у карточек полезная информация*/
 .img-info,.img-info1,.img-info2,.img-info3{
     width: 261px;
     height: 261px;
@@ -358,11 +385,19 @@ ul {
     gap: 30px;
 }
 
+.info-consultant>button{transition: transform 0.3s ease;}
+
+.info-consultant>button:hover{
+    transform: scale(1.05);
+}
+
 .text-img{
     display: flex;
     margin-left: auto;
     margin-right: auto;
 }
+
+/*расставление картинок*/
 
 .img-info{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/1 2.png");
@@ -388,6 +423,8 @@ footer{
     justify-content: space-between;
 }
 
+.footer-text, .footer-nav{margin-top: 20px;}
+
 .footer-text{
     width: 340px;
 }
@@ -409,8 +446,14 @@ footer{
     color:#8191A6;
 }
 
+
 .footer-ul>li{
     margin-top: 15px;
+    transition: transform 0.15s ease;
+}
+
+.footer-ul>li:not(:first-child):hover{
+    transform: translateY(-3px);
 }
 
 .footer-ul>li:first-child{
@@ -419,6 +462,8 @@ footer{
     color:black;
 }
 
+
+/*------------------------------------------АДАПТИВ----------------------------------------------*/
 
 @media screen and (max-width: 1024px) {
     header {
@@ -445,12 +490,12 @@ footer{
     }
 
     .ul-peculiarities {
-        flex-direction: column;
+        flex-direction: column; /*идет в столбец друг за другом*/
         gap: 20px;
     }
 
     .block-cards {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /*если не влезает переход на след строчку*/
         justify-content: center;
         gap: 20px;
     }
@@ -472,6 +517,7 @@ footer{
         margin: 0;
     }
 
+    .info-title{margin-top: 60px;}
     .info-card {
         flex-wrap: wrap;
         justify-content: center;
@@ -586,6 +632,7 @@ footer{
         width: 200px; 
     }
 
+
     .block-cards {
         flex-wrap: wrap;
         justify-content: center;
@@ -659,7 +706,7 @@ footer{
 
     .img-info, .img-info1, .img-info2, .img-info3 {
         width: calc(50% - 15px);
-        max-width: 280px;
+        max-width: 260px;
         height: 250px;
         margin: 0;
         background-repeat: no-repeat;
@@ -790,10 +837,12 @@ footer{
         width: 100%;
         max-width: 250px;
         height: 45px;
+        padding-left: 15px;
     }
 
+
     input::placeholder {
-        padding-left: 15px;
+        color: white;
     }
 
     .peculiarities {
