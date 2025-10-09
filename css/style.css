@@ -657,6 +657,7 @@ footer{
         max-width: 280px;
         height: 250px;
         margin: 0;
+        background-repeat: no-repeat;
     }
 
     .text-img {
@@ -978,3 +979,4 @@ footer{
         font-size: 14px;
     }
 }
+
