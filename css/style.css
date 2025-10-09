@@ -36,6 +36,11 @@ header {
     border: none;
     color: white;
     font-weight: bold;
+    transition: transform 0.2s ease; 
+}
+
+.button-number:hover {
+    transform: scale(1.2);
 }
 
 .header {
@@ -1033,6 +1038,7 @@ footer{
         font-size: 14px;
     }
 }
+
 
 
 
