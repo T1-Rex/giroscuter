@@ -716,8 +716,7 @@ footer{
         gap: 15px; 
     }
 
-    .card {
-        width: calc(50% - 15px); 
+    .card { 
         max-width: 280px;
         height: auto;
         min-height: 350px; 
@@ -782,7 +781,6 @@ footer{
     }
 
     .img-info, .img-info1, .img-info2, .img-info3 {
-        width: calc(50% - 15px);
         max-width: 260px;
         height: 250px;
         margin: 0;
@@ -1110,6 +1108,7 @@ footer{
         font-size: 14px;
     }
 }
+
 
 
 
